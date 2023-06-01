@@ -1,0 +1,47 @@
+server:
+  mode: release
+  healthz: true
+  middlewares: recovery,logger,secure,nocache,cors # 加载的 gin 中间件列表，多个中间件，逗号(,)隔开
+  max-ping-count: 3
+
+# HTTP 配置
+insecure:
+  bind-address: 0.0.0.0
+  bind-port: 9527
+
+# HTTPS 配置
+secure:
+  bind-address: 127.0.0.1
+  bind-port: 0
+  required: false
+#  tls:
+#    cert-dir: .goecm/cert
+#    pair-name: goecm
+#    cert-key:
+#      cert-file: ${IAM_APISERVER_SECURE_TLS_CERT_KEY_CERT_FILE}
+#      private-key-file: ${IAM_APISERVER_SECURE_TLS_CERT_KEY_PRIVATE_KEY_FILE}
+
+mysql:
+  host: 127.0.0.1:3306
+  username: root
+  password: 1qaz2WSX
+  database: goecm
+  max-idle-connections: 100
+  max-open-connections: 100
+  max-connection-life-time: 10s
+  log-level: 2
+
+# JWT 配置
+jwt:
+  realm: JWT
+  key: dfVpOK8LZeJLZHYmHdb1VdyRrACKpqoo
+  timeout: 24h
+  max-refresh: 24h
+
+log:
+  name: goecm
+  development: true
+  level: info
+  format: console
+  enable-color: true
+  disable-caller: false

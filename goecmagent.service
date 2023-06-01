@@ -1,0 +1,14 @@
+[Unit]
+Description=Go ECM agent
+After=network.target
+
+[Service]
+User=root
+ExecStartPre=
+ExecStart=/usr/local/bin/goecmagent -c /etc/goecmagent/agent-config.yaml
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

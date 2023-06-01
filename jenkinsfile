@@ -1,0 +1,43 @@
+#!groovy
+pipeline {
+    agent {
+        label: 'golang-ci'
+    }
+
+    options {
+        timestamps()
+    }
+
+    environment {
+        GOOS = "linux"
+        GOARCH = "amd64"
+    }
+
+    parameters {
+        stringParam()
+    }
+
+    stages {
+        stage('clone goecm repository') {
+            steps {
+                dir("${env.WORKSPACE}") {
+                    sh 'git config --global http.sslVerify false'
+                    git branch: 'x',
+                    credentialsId: 'x',
+                    url: 'x'
+                }
+            }
+        }
+        stage('generate compose template file') {
+            steps {
+                dir("${env.WORKSPACE}") {
+                    sh '''
+                    mkdir /tmp/standard
+                    scp -r x:/edoc2-data/ecm/goecm/${VERSION} /tmp/
+                    scp x:/edoc2-data/ecm/${VERSION}/*.yml /tmp/standard/
+                    '''
+                }
+            }
+        }
+    }
+}

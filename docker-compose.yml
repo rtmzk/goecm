@@ -1,0 +1,31 @@
+version: 3.5
+
+services:
+  goecmserver:
+    hostname: goecmserver
+    image: x
+    ports:
+      - "9527:9527"
+    volumes:
+      - /:/hostfs
+      - /data:/data/packages
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      "type": "1"
+    networks:
+      - goecm
+    cap_add:
+      - SYS_PTRACE
+    env_file:
+      ./envfile.env
+    deploy:
+      placement:
+        constraints:
+          - node.labels.nodetype == InDrive
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+networks:
+  goecm:
+    driver: overlay

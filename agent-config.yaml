@@ -1,0 +1,22 @@
+server:
+  mode: release
+  healthz: false
+  middlewares: recovery,logger,secure,nocache,cors
+
+insecure:
+  bind-address: x
+  bind-port: x
+
+agent:
+  server-addr: x:y
+  report-interval: 30
+  heartbeat-interval: 30
+
+log:
+  name: agent
+  development: true
+  level: info
+  format: console
+  enable-color: true
+  disable-caller: false
+  output-paths: /var/log/goecmagent/goecmagent.log

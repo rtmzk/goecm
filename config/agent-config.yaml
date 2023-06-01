@@ -1,0 +1,33 @@
+server:
+  mode: release
+  healthz: false
+  middlewares: recovery,logger,secure,nocache,cors
+
+insecure:
+  bind-address: x
+  bind-port: x
+
+secure:
+  bind-address: x
+  bind-port: x
+  required: false
+#  tls:
+    #cert-dir: .iam/cert
+    #pair-name: iam
+#    cert-key:
+#      cert-file: ${IAM_APISERVER_SECURE_TLS_CERT_KEY_CERT_FILE}
+#      private-key-file: ${IAM_APISERVER_SECURE_TLS_CERT_KEY_PRIVATE_KEY_FILE}
+
+agent:
+  server-addr: x:y
+  token: 1
+  report-interval: 30
+  heartbeat-interval: 30
+
+log:
+  name: agent
+  development: true
+  level: info
+  format: console
+  enable-color: true
+  disable-caller: false

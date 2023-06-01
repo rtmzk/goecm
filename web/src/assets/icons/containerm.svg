@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="ic-容器管理" transform="translate(82 -1230)">
+    <rect id="矩形_4844" data-name="矩形 4844" width="16" height="16" transform="translate(-82 1230)" fill="none"/>
+    <g id="组_12385" data-name="组 12385" transform="translate(-210.315 1105.134)">
+      <path id="路径_38064" data-name="路径 38064" d="M221.127,217.677h1v1h-1Zm-2,0h1v1h-1Zm-2,0h1v1h-1Zm-2,0h1v1h-1Zm-4,0h1v1h-1Zm0-10h1v1h-1Zm2,10h1v1h-1Zm-2-2h1v1h-1Zm0-2h1v1h-1Zm0-2h1v1h-1Zm0-2h1v1h-1Zm10,6h1v1h-1Zm0-2h1v1h-1Zm0-2h1v1h-1Zm0-2h1v1h-1Zm0-2h1v1h-1Zm-2,0h1v1h-1Zm-2,0h1v1h-1Zm-2,0h1v1h-1Zm-2,0h1v1h-1Zm0,0" transform="translate(-80.312 -80.311)" fill="currentColor"/>
+      <path id="路径_38065" data-name="路径 38065" d="M142.315,125.866h-12a1,1,0,0,0-1,1v12a1,1,0,0,0,1,1h12a1,1,0,0,0,1-1v-12A1,1,0,0,0,142.315,125.866Zm0,12.5a.472.472,0,0,1-.5.5h-11a.472.472,0,0,1-.5-.5v-11a.472.472,0,0,1,.5-.5h11a.472.472,0,0,1,.5.5Zm0,0" fill="currentColor"/>
+    </g>
+  </g>
+</svg>

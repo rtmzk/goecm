@@ -1,0 +1,46 @@
+{
+  "rules": [
+    {
+      "name": "服务器CPU核心数检查",
+      "description": "要求服务器CPU核心数>=8",
+      "func": "cpu_core_check",
+      "status": "none",
+      "message": "none"
+    },
+    {
+      "name": "服务器内存资源检查",
+      "description": "要求服务器内存>=32G",
+      "func": "mem_total_check",
+      "status": "none",
+      "message": "none"
+    },
+    {
+      "name": "SElinux检查",
+      "description": "要求关闭SElinux",
+      "func": "selinux_check",
+      "status": "none",
+      "message": "none"
+    },
+    {
+      "name": "时间同步服务检查",
+      "description": "要求添加的节点间时间互相同步",
+      "func": "ntp_check",
+      "status": "none",
+      "message": "none"
+    },
+    {
+      "name": "防火墙端口检查",
+      "description": "检查服务器",
+      "func": "firewall_check",
+      "status": "none",
+      "message": "none"
+    },
+    {
+      "name": "系统内核参数检查",
+      "description": "内核参数检查",
+      "func": "system_params_check",
+      "status": "none",
+      "message": "none"
+    }
+  ]
+}
