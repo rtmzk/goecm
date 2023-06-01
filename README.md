@@ -33,21 +33,31 @@ vi  /etc/goecmserver/config.yaml
 
 配置项说明:
 server.mode: 是否是生产环境
+
 server.healthz: 是否在启动之后自检
+
 server.middleware: 当前开启的中间件插件
+
 server.max-ping-count: 自检最大重试次数
 
 insecure.bind-address: http协议监听的ip地址
+
 insecure.bind-port: http协议监听的端口
 
 sqlite.path: 数据库存放位置
+
 sqlite.max-idle-connections: 最大空闲连接数
+
 sqlite.max-open-connections: 最大打开的连接数
+
 sqlite.max-connection-life-time: 空闲链接最大存活时间
+
 log-level: gorm日志级别
 
 dockernet.docker0: 配置docker0网桥的ip地址
+
 dockernet.docker_gwbridge: 配置docker_gwbridge网桥的ip地址
+
 dockernet.macrowing: 配置macrowing网络的地址池
 
 ### 启动goecmserver
@@ -113,10 +123,15 @@ systemctl start goecmserver
    ![](./image/09.png)
 
 （1）	中间件部署模式，选择单机部署或者集群部署，集群部署请确保每个中间件节点都有三个
+
 （2）	中间件配置卡片，每个中间件的配置都是独立的
+
 （3）	当前中间件的节点IP地址，多个ip地址用逗号分割
+
 （4）	当前中间件的存储路径
+
 （5）	单机模式下的ES节点需要填写备份路径
+
 
 6. 数据库部署
 
@@ -125,14 +140,23 @@ systemctl start goecmserver
 ![](./image/11.png)
 
 (1)	数据库部署模式，选择内置容器模式或者使用客户提供的数据库
+
 (2)	内置容器部署模式下的数据库节点的IP地址，多个节点用逗号分隔
+
 (3)	内置容器的数据库存储路径
+
 (4)	内置容器的数据库备份路径
+
 (5)	外置数据库部署模式下的数据库节点ip地址
+
 (6)	外置数据库链接账号
+
 (7)	外置数据库链接密码
+
 (8)	外置数据库链接端口
+
 (9)	数据库类型,MySQL或者MSSQL，mysql版本要求8.0.17,mssql版本要求2017+
+
 
 7. 应用部署
 
@@ -141,16 +165,27 @@ systemctl start goecmserver
    ![](./image/13.png)
 
 （1）	选择存储类型，支持选择 本地存储、华为对象存储(OBS)、阿里云对象存储(OSS)、腾讯对象存储(COS)、Ceph存储、兼容性S3存储，不选择默认为本地存储
+
 （2）	存储路径，选择本地存储时实体文件的存储路径
+
 （3）	访问方式，选择http或者https
+
 （4）	访问端口
+
 （5）	docker0网络地址池 不能与物理网络冲突
+
 （6）	gwbridge网络地址池 不能与物理网络冲突
+
 （7）	macrowing网络地址池 不能与物理网络冲突
+
 （8）	对象存储的链接地址，多个地址用逗号分隔
+
 （9）	对象存储的存储桶
+
 （10）	登录ID: accesskey
+
 （11）	登录秘钥: secretkey
+
 （12）	当存储为ceph存储时要配置存储健康检查地址
 
 8. 信息确认
